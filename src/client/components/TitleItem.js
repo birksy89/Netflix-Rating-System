@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   display: flex;
-  min-height: 10rem;
+  min-height: 15rem;
   color: #333;
   background-color: #ccc;
   margin-bottom: 2rem;

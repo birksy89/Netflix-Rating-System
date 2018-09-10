@@ -20,16 +20,16 @@ module.exports = {
     const CREDS = require(__dirname + "/../data/netflixCreds.js");
 
     try {
-      //Login
-      await page.click(USERNAME_SELECTOR);
-      await page.keyboard.type(CREDS.username);
-      //Pass
-      await page.click(PASSWORD_SELECTOR);
-      await page.keyboard.type(CREDS.password);
-      //Go
-      await page.click(BUTTON_SELECTOR);
-      await page.waitForNavigation();
-    } catch {
+       //Login
+       await page.click(USERNAME_SELECTOR);
+       await page.keyboard.type(CREDS.username);
+       //Pass
+       await page.click(PASSWORD_SELECTOR);
+       await page.keyboard.type(CREDS.password);
+       //Go
+       await page.click(BUTTON_SELECTOR);
+       await page.waitForNavigation();
+    } catch (error) {
       console.log("Error - Changed input selectors");
 
       await page.click("#email");
@@ -41,6 +41,8 @@ module.exports = {
       await page.click(".login-button");
       await page.waitForNavigation();
     }
+
+
 
     //Check we good
     //await page.screenshot({ path: "screenshots/netflix-logged-in.png" });
